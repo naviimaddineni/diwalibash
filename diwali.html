@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1>Happy Diwali</h1>
+    <div>
+        <p>
+            Diwali, the Festival of Lights, is a joyous celebration observed by Hindus, Jains, Sikhs, and some Buddhists around the world. It symbolizes the spiritual victory of light over darkness, knowledge over ignorance, and good over evil. 
+
+The festival is marked by the illumination of homes with diyas (clay lamps) and colorful lights, the exchange of sweets and gifts, and the performance of puja (worship) to Lakshmi, the goddess of wealth. 
+
+Diwali has various mythological and historical significance across different religions:
+
+Hinduism: It commemorates the return of Lord Rama to Ayodhya after defeating Ravana.
+Jainism: It marks the attainment of Moksha (liberation) by Mahavira. 
+Sikhism: It celebrates the release of the sixth Sikh Guru, Guru Hargobind, from Gwalior Fort.
+Buddhism: It honors the enlightenment of Gautama Buddha.
+
+Preparations for Diwali begin weeks in advance. Homes are cleaned and decorated with intricate rangoli designs. New clothes are purchased, and festive delicacies are prepared. The festival is celebrated over five days, each with its own significance:
+
+1. Dhanteras: The day before Diwali, considered auspicious for buying gold, silver, and other valuables.
+2. Chhoti Diwali (Naraka Chaturdashi): The day before Diwali, when people clean their homes and take oil baths.
+3. Diwali (Lakshmi Puja): The main day of the festival, dedicated to Lakshmi puja and the lighting of diyas.
+4. Govardhan Puja: Celebrated in some regions, honoring Lord Krishna's lifting of Mount Govardhan.
+5. Bhai Dooj: A day dedicated to the bond between siblings.
+
+Diwali is a time for family gatherings, sharing joy, and expressing gratitude. It is a festival that brings people together, promoting peace, harmony, and the spirit of giving. 
+
+        </p>
+        <div class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmoepzCuWIREVSImhd_CgsRxwv6JSJYgOjOA&s" alt="">
+        </div>
+    
+    </div>
+</body>
+<script>
+    function launchConfetti() {
+    const duration = 7 * 1000; // 10 seconds
+    const end = Date.now() + duration;
+    const colors = ['#ffeb3b', '#8F00FF', '#ff5722', '#4caf50', '#FFFFFF',"#000000"];
+    (function frame() {
+        confetti({
+            particleCount: 6, // Reduced number of particles
+            startVelocity: 80,
+            spread: 450,
+            ticks: 190,
+            origin: { x: 0.5, y: 0.5 }, // Start from top center
+            colors: colors,
+        });
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+}
+window.onload = function() {
+    launchConfetti();
+}
+</script>
+</html>
